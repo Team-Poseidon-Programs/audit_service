@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: audit-api-service 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: audit-api-service
+  template:
+    metadata:
+      labels:
+        app: audit-api-service
+    spec:
+      containers:
+      - name: audit-api-service
+        image: poseidon2022/auditservice
+        ports:
+        - containerPort: 80
+        env:
+        - name: TITLE
+          value: "Welcome to Azure Kubernetes Service (AKS)"
