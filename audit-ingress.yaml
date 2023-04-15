@@ -28,5 +28,65 @@ spec:
                 port:
                   # Specify the port number of the backend service to forward requests to
                   number: 80
+          - # Specify the path to match for this rule
+            path: /api/Audit/AddBloodPressureDiastolic
+            pathType: Prefix
+            backend:
+              service:
+                # Specify the name of the backend service to forward requests to
+                name: audit-api-service
+                port:
+                  # Specify the port number of the backend service to forward requests to
+                  number: 80
+          - # Specify the path to match for this rule
+            path: /api/Audit/AddBloodPressureSystolic
+            pathType: Prefix
+            backend:
+              service:
+                # Specify the name of the backend service to forward requests to
+                name: audit-api-service
+                port:
+                  # Specify the port number of the backend service to forward requests to
+                  number: 80
+          - # Specify the path to match for this rule
+            path: /api/Audit/AddBodyTemperature
+            pathType: Prefix
+            backend:
+              service:
+                # Specify the name of the backend service to forward requests to
+                name: audit-api-service
+                port:
+                  # Specify the port number of the backend service to forward requests to
+                  number: 80
+          - # Specify the path to match for this rule
+            path: /api/Audit/AddHeight
+            pathType: Prefix
+            backend:
+              service:
+                # Specify the name of the backend service to forward requests to
+                name: audit-api-service
+                port:
+                  # Specify the port number of the backend service to forward requests to
+                  number: 80
+          - # Specify the path to match for this rule
+            path: /api/Audit/AddRespiration
+            pathType: Prefix
+            backend:
+              service:
+                # Specify the name of the backend service to forward requests to
+                name: audit-api-service
+                port:
+                  # Specify the port number of the backend service to forward requests to
+                  number: 80
+          - # Specify the path to match for this rule
+            path: /api/Audit/AddWeight
+            pathType: Prefix
+            backend:
+              service:
+                # Specify the name of the backend service to forward requests to
+                name: audit-api-service
+                port:
+                  # Specify the port number of the backend service to forward requests to
+                  number: 80
         
          
